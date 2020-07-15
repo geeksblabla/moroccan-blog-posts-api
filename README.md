@@ -1,4 +1,4 @@
-## Moroccan Blogs API
+## Moroccan Blog Posts API
 
 A Simple API to collect Blog Posts from moroccan developers Community.
 

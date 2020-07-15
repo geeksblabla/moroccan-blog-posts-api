@@ -1,6 +1,6 @@
 [build]
     publish = "demo/build"
-    command = "cd demo &&  npm run build && cd ../functions/api && yarn"
+    command = "cd demo && yarn && npm run build && cd ../functions/api && yarn"
     functions = "functions"
 
 [[redirects]]
