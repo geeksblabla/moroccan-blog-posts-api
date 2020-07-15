@@ -2,8 +2,6 @@ const Parser = require("rss-parser");
 
 const parser = new Parser();
 
-const RSS_URL = `http://www.rssmix.com/u/11785756/rss.xml`;
-
 // initial  data state
 // use Global vars will help cache the result in the netlify function
 const data = {
@@ -13,6 +11,17 @@ const data = {
 };
 
 exports.handler = async function (event) {
+  if (!process.env.RSS_URL) {
+    const msg = `
+    RSS URL  missing.
+    `;
+    console.error(msg);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ msg }),
+    };
+  }
+
   const limit = parseInt(event.queryStringParameters.limit || 20);
   const offset = parseInt(event.queryStringParameters.offset || 0);
   const currentTime = new Date();
