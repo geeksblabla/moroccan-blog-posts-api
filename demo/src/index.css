@@ -1,0 +1,48 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.article {
+  width: 300px;
+  margin: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  background: #eceff1;
+  border-radius: 4px;
+  overflow: hidden;
+  font: 12px/1.1 system-ui, sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  color: #455a64;
+}
+
+a:hover {
+  color: #2196f3;
+}
+.article > h2 {
+  padding: 1rem 1rem;
+  margin: 0;
+}
+.details {
+  font-size: 12px;
+  display: flex;
+  background: #d2d2d7;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+.title {
+  flex: 1;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.button {
+  margin: 10px;
+}

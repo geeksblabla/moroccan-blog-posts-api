@@ -1,0 +1,15 @@
+[build]
+    publish = "demo/build"
+    command = "cd demo &&  npm run build && cd ../functions/api && yarn"
+    functions = "functions"
+
+[[redirects]]
+  from = "/"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/demo"
+  to = "/"
+  status = 200
+  force = true
