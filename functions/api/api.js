@@ -51,7 +51,7 @@ exports.handler = async function (event) {
 };
 
 const getPosts = async () => {
-  const feed = await parser.parseURL(RSS_URL);
+  const feed = await parser.parseURL(process.env.RSS_URL);
   return feed.items.map(normalizePost);
 };
 

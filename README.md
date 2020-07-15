@@ -10,15 +10,16 @@ A Simple API to collect Blog Posts from moroccan developers Community.
 
 ## Demo
 
-=>
+=> https://moroccan-blog-posts-api.netlify.app/demo
 
 ## Get Started
 
 Get Latest Blog Posts
 
 ```js
+const API = "https://moroccan-blog-posts-api.netlify.app/";
 try {
-  const data = await fetch(RSS_URL);
+  const data = await fetch(API);
   const feed = await data.json();
 } catch (error) {
   console.log(error);
@@ -50,5 +51,5 @@ Result :
 - You can use `offset` and `limit` to fetch more
 
 ```js
-const data = await fetch(`${RSS_URL}?offset=10&limit=20`);
+const data = await fetch(`${API}?offset=10&limit=20`);
 ```
